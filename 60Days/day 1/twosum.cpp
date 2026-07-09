@@ -1,5 +1,25 @@
 class Solution {
 public:
+    vector<int> twoSum(vector<int>& arr, int target) {
+      unordered_map<int,int> mp;
+      int n = arr.size();
+
+      for(int i=0; i<n;i++){
+            int needed = target - arr[i];
+
+            if(mp.find(needed) != mp.end()){ // if true the ele exists
+                return {mp[needed],i};  // needed means value so mp[needed] returns idx
+            }
+
+            mp[arr[i]] = i;
+      }
+      return {};
+    }
+};
+
+
+class Solution {
+public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int n= nums.size();
        

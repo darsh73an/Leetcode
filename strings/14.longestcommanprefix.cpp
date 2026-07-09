@@ -18,3 +18,12 @@ public:
         return prefix;
     }
 };
+
+
+str1.find(str2) → searches str2 inside str1
+Returns the starting index of str2
+== 0 → str2 is at the beginning
+!= 0 → str2 is not at the beginning
+Not found → returns string::npos
+
+Remember: find(str2) != 0 → str2 should not start at 0th index.
